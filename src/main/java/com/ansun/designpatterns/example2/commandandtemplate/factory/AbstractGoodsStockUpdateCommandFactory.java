@@ -8,6 +8,7 @@ package com.ansun.designpatterns.example2.commandandtemplate.factory;
  */
 
 import com.ansun.designpatterns.example2.commandandtemplate.GoodsStockUpdateCommand;
+import com.ansun.designpatterns.example2.commandandtemplate.StockStatus;
 import com.ansun.designpatterns.example2.entity.GoodsStockDO;
 import com.ansun.designpatterns.mapper.example2.GoodsStockMapper;
 import lombok.extern.slf4j.Slf4j;

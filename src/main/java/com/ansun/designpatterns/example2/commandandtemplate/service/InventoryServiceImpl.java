@@ -1,8 +1,11 @@
 package com.ansun.designpatterns.example2.commandandtemplate.service;
 
 import com.ansun.designpatterns.example2.commandandtemplate.GoodsStockUpdateCommand;
+import com.ansun.designpatterns.example2.commandandtemplate.factory.PurchaseInputStockUpdateCommandFactory;
+import com.ansun.designpatterns.example2.commandandtemplate.factory.ReturnGoodsInputStockUpdateCommandFactory;
+import com.ansun.designpatterns.example2.dto.PurchaseInputOrderDTO;
+import com.ansun.designpatterns.example2.dto.ReturnGoodsInputOrderDTO;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

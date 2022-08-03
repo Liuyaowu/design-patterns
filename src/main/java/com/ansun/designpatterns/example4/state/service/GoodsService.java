@@ -1,6 +1,8 @@
 package com.ansun.designpatterns.example4.state.service;
 
 import com.ansun.designpatterns.convertor.GoodsConvertor;
+import com.ansun.designpatterns.example4.state.dto.GoodsDTO;
+import com.ansun.designpatterns.example4.state.dto.GoodsStatus;
 import com.ansun.designpatterns.example4.state.manage.GoodsStateManager;
 import com.ansun.designpatterns.mapper.example4.GoodsMapper;
 import org.springframework.stereotype.Service;
@@ -9,14 +11,12 @@ import javax.annotation.Resource;
 import java.util.Date;
 
 /**
- * TODO
- *
  * @author liuyaowu
  * @date 2022-08-03 17:45
  */
 @Service
 public class GoodsService {
-    
+
     @Resource
     private GoodsStateManager goodsStateManager;
     @Resource
@@ -87,5 +87,5 @@ public class GoodsService {
         goodsStateManager.pullOffShelves(goods);
         return true;
     }
-    
+
 }

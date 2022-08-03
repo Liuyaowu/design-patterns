@@ -1,6 +1,8 @@
 package com.ansun.designpatterns.example4.state;
 
 import com.ansun.designpatterns.convertor.GoodsConvertor;
+import com.ansun.designpatterns.example4.state.dto.GoodsDTO;
+import com.ansun.designpatterns.example4.state.dto.GoodsStatus;
 import com.ansun.designpatterns.mapper.example4.GoodsMapper;
 import org.springframework.stereotype.Component;
 

@@ -1,10 +1,10 @@
 package com.ansun.designpatterns.example2.commandandtemplate;
 
-import cn.hutool.core.date.DateUtil;
 import com.ansun.designpatterns.example2.entity.GoodsStockDO;
 import com.ansun.designpatterns.mapper.example2.GoodsStockMapper;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -91,7 +91,7 @@ public abstract class AbstractGoodsStockUpdateCommand implements GoodsStockUpdat
      */
     private void updateGmtModifiedTime() throws Exception {
         for (GoodsStockDO goodsStockDO : goodsStockDOList) {
-            goodsStockDO.setGmtModified(DateUtil.now());
+            goodsStockDO.setGmtModified(new Date());
         }
     }
 

@@ -3,6 +3,8 @@ package com.ansun.designpatterns.example2.commandandtemplate.factory;
 import cn.hutool.core.collection.CollectionUtil;
 import com.ansun.designpatterns.example2.commandandtemplate.GoodsStockUpdateCommand;
 import com.ansun.designpatterns.example2.commandandtemplate.PurchaseInputStockUpdateCommand;
+import com.ansun.designpatterns.example2.dto.PurchaseInputOrderDTO;
+import com.ansun.designpatterns.example2.dto.PurchaseInputOrderItemDTO;
 import com.ansun.designpatterns.example2.entity.GoodsStockDO;
 import com.ansun.designpatterns.mapper.example2.GoodsStockMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 创建采购入库库存更新命令的工厂
@@ -34,7 +37,7 @@ public class PurchaseInputStockUpdateCommandFactory<T> extends AbstractGoodsStoc
     @Override
     protected List<Long> getGoodsSkuId(T t) {
         PurchaseInputOrderDTO purchaseInputOrderDTO = (PurchaseInputOrderDTO) t;
-        List<PurchaseInputOrderItemDTO> purchaseInputOrderItemDTOList = purchaseInputOrderDTO.getPurchaseInputOrderItemDTOS();
+        List<PurchaseInputOrderItemDTO> purchaseInputOrderItemDTOList = purchaseInputOrderDTO.getItems();
 
         if (CollectionUtil.isEmpty(purchaseInputOrderItemDTOList))     {
             return new ArrayList<>(0);
@@ -57,7 +60,7 @@ public class PurchaseInputStockUpdateCommandFactory<T> extends AbstractGoodsStoc
     protected GoodsStockUpdateCommand createCommand(List<GoodsStockDO> goodsStockDOList, T t) {
         // 采购入库单
         PurchaseInputOrderDTO purchaseInputOrderDTO = (PurchaseInputOrderDTO) t;
-        List<PurchaseInputOrderItemDTO> purchaseInputOrderItemDTOList = purchaseInputOrderDTO.getPurchaseInputOrderItemDTOS();
+        List<PurchaseInputOrderItemDTO> purchaseInputOrderItemDTOList = purchaseInputOrderDTO.getItems();
 
         // key为商品SKU ID,值为采购入库单Item DTO对象
         Map<Long, PurchaseInputOrderItemDTO> purchaseInputOrderItemDTOMap = new HashMap<>(16);

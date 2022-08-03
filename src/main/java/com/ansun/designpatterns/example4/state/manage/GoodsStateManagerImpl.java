@@ -1,9 +1,8 @@
 package com.ansun.designpatterns.example4.state.manage;
 
-import com.ansun.designpatterns.example4.state.ApproveRejectGoodsState;
-import com.ansun.designpatterns.example4.state.GoodsState;
-import com.ansun.designpatterns.example4.state.WaitForApproveGoodsState;
-import com.ansun.designpatterns.example4.state.WaitForPutOnShelvesGoodsState;
+import com.ansun.designpatterns.example4.state.*;
+import com.ansun.designpatterns.example4.state.dto.ApproveResult;
+import com.ansun.designpatterns.example4.state.dto.GoodsDTO;
 import com.ansun.designpatterns.example4.state.factory.GoodsStateFactory;
 import org.springframework.stereotype.Component;
 

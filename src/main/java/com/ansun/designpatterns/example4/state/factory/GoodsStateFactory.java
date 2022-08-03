@@ -1,6 +1,8 @@
 package com.ansun.designpatterns.example4.state.factory;
 
 import com.ansun.designpatterns.example4.state.*;
+import com.ansun.designpatterns.example4.state.dto.GoodsDTO;
+import com.ansun.designpatterns.example4.state.dto.GoodsStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

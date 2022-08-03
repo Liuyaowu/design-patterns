@@ -1,5 +1,6 @@
 package com.ansun.designpatterns.example4.state;
 
+import com.ansun.designpatterns.example4.state.dto.GoodsDTO;
 import org.springframework.stereotype.Component;
 
 /**

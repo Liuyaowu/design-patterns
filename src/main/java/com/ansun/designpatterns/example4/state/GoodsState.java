@@ -1,5 +1,7 @@
 package com.ansun.designpatterns.example4.state;
 
+import com.ansun.designpatterns.example4.state.dto.GoodsDTO;
+
 /**
  * 商品状态接口
  * <p>

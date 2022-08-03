@@ -1,9 +1,11 @@
 package com.ansun.designpatterns.example2.commandandtemplate;
 
+import com.ansun.designpatterns.example2.dto.ReturnGoodsInputOrderItemDTO;
 import com.ansun.designpatterns.example2.entity.GoodsStockDO;
 import com.ansun.designpatterns.mapper.example2.GoodsStockMapper;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 退货入库库存更新命令
